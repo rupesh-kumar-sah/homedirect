@@ -1,12 +1,12 @@
 {
   "name": "homedirect-relayer",
   "version": "0.1.0",
-  "description": "HomeDirect backend/relayer — bridges the Next.js frontend with Stellar Soroban contracts",
+  "description": "HomeDirect backend/relayer \u2014 bridges the Next.js frontend with Stellar Soroban contracts",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
+    "dev": "node init && tsx watch src/index.ts",
+    "build": "node init && tsc",
+    "start": "node init && node dist/index.js",
     "lint": "eslint src --ext .ts",
     "db:setup": "tsx src/database/setup.ts",
     "db:reset": "tsx -e \"import('./src/database/setup.js').then(m => m.resetDatabase())\""
